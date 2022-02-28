@@ -1,0 +1,151 @@
+@import "../../styles/modules.scss";
+
+.hero {
+  align-items: center;
+  background: transparent url("../../images/hero-background.svg") center
+    no-repeat;
+  background-size: cover;
+  color: $text-color-white;
+  display: flex;
+  padding: 175px 0 75px;
+  position: relative;
+  text-align: center;
+
+  h1 {
+    font-size: 30px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+
+    @include media-breakpoint-up(md) {
+      font-size: 65px;
+      line-height: 80px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__paragraph {
+    @extend p;
+  }
+
+  &::after {
+    background-color: $secondary-color;
+    bottom: 0;
+    content: "";
+    mix-blend-mode: multiply;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    width: 100%;
+  }
+
+  @include media-breakpoint-only(md) {
+    padding: 210px 0 100px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    align-items: center;
+    display: flex;
+    height: 900px;
+    padding: 110px 0 75px;
+    text-align: left;
+
+    &--blog-post {
+      height: auto;
+      min-height: 900px;
+    }
+  }
+
+  &[class*="birth-control-options"],
+  &[class*="contraception-quiz"] {
+    background-image: url("../../images/hero-background-birth-control.svg");
+
+    &::after {
+      background-color: $quaternary-color;
+    }
+  }
+
+  &[class*="compare-contraceptive-methods"] {
+    background-image: url("../../images/hero-background-compare.svg");
+
+    &::after {
+      background-color: $nonary-color;
+    }
+  }
+
+  &[class*="am-i-pregnant"] {
+    background-image: url("../../images/hero-background-am-i-pregnant.svg");
+
+    &::after {
+      background-color: $octonary-color;
+    }
+  }
+
+  &[class*="frequently-asked-questions"] {
+    background-image: url("../../images/hero-background-faqs.svg");
+
+    &::after {
+      background-color: $quinary-color;
+    }
+  }
+
+  &--single-faq {
+    padding: 0;
+    height: 110px;
+    background: $quinary-color;
+
+    &::after {
+      content: none;
+    }
+  }
+
+  &--single-method {
+    background-image: url("../../images/hero-background-single-method.svg");
+
+    &::after {
+      background-color: $senary-color;
+    }
+  }
+
+  .container {
+    z-index: 1;
+  }
+
+  &__content {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+    @include media-breakpoint-up(lg) {
+      align-items: flex-start;
+
+      &--blog-post {
+        margin-bottom: 200px;
+      }
+    }
+
+    p {
+      font-family: $font-capriola;
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 40px;
+
+      small {
+        display: block;
+        font-size: 12px;
+        line-height: 18px;
+      }
+
+      @include media-breakpoint-up(lg) {
+        font-size: 25px;
+        line-height: 40px;
+
+        small {
+          font-size: 15px;
+          line-height: 25px;
+        }
+      }
+    }
+  }
+}

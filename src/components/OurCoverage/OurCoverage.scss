@@ -1,0 +1,142 @@
+@import "../../styles/modules.scss";
+
+.coverage {
+  background: transparent url("../../images/coverage-bg.svg") center top
+    no-repeat;
+  background-size: cover;
+  position: relative;
+  color: $text-color-white;
+  overflow: hidden;
+
+  &::before {
+    bottom: 0;
+    display: block;
+    content: "";
+    background-color: $septenary-color;
+    mix-blend-mode: multiply;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    width: 100%;
+  }
+
+  .carousel-inner {
+    overflow: unset;
+  }
+
+  .container {
+    z-index: 1;
+  }
+
+  &__content {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    h2 {
+      color: $secondary-color;
+    }
+
+    h2,
+    p {
+      text-align: center;
+    }
+
+    @include media-breakpoint-up(lg) {
+      align-items: flex-start;
+
+      h2,
+      p {
+        text-align: left;
+      }
+    }
+  }
+
+  .carousel-indicators {
+    margin: 100px 0 0;
+    position: relative;
+
+    @include media-breakpoint-up(lg) {
+      justify-content: flex-start;
+    }
+
+    li {
+      background: $white;
+      border: none;
+      border-radius: 100px;
+      cursor: pointer;
+      height: 18px;
+      margin-left: 10px;
+      margin-top: 2px;
+      opacity: 1;
+      transition: 0.2s;
+      width: 18px;
+
+      &.active {
+        border-color: $secondary-color;
+        background-color: $secondary-color;
+        height: 22px;
+        margin-top: 0;
+        width: 22px;
+      }
+    }
+  }
+
+  p {
+    margin-bottom: 75px;
+  }
+
+  button {
+    &:active,
+    &:focus,
+    &:hover {
+      background: $secondary-color;
+    }
+  }
+
+  .dropdown-menu.show {
+    &.country-dropdown {
+      border: none;
+      box-shadow: 0px 0px 34px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      position: absolute;
+      padding: 30px;
+      width: 550px;
+
+      &.continent-1 {
+        li {
+          &:not(.africa) {
+            display: none;
+          }
+        }
+      }
+
+      &.continent-2 {
+        li {
+          &:not(.america) {
+            display: none;
+          }
+        }
+      }
+     
+      &.continent-3 {
+        li {
+          &:not(.asia) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      padding: 20px !important;
+      position: relative !important;
+      transform: none !important;
+      width: calc(100vw - 30px) !important;
+    }
+  }
+}

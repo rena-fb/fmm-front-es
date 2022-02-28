@@ -1,0 +1,227 @@
+@import "../../styles/modules.scss";
+
+header#header {
+  position: absolute;
+  padding: 25px 0;
+  z-index: 10;
+  width: 100%;
+  transition: 0.3s;
+
+  @include media-breakpoint-down(sm) {
+  }
+
+  .icon-button {
+    height: 40px;
+    position: relative;
+    width: 40px;
+    z-index: 10;
+  }
+
+  .nav {
+    align-items: center;
+    display: flex;
+    justify-content: end;
+
+    a,
+    .button--link {
+      background: none;
+      border: none;
+      color: $white;
+      font-family: $font-capriola;
+      font-size: 17px;
+      line-height: 1.25;
+      padding: 0;
+      transition: 0.2s;
+
+      @include media-breakpoint-only(lg) {
+        font-size: 15px;
+      }
+
+      &.active {
+        color: $septenary-color;
+      }
+
+      &:focus {
+        box-shadow: none;
+        outline: none;
+      }
+
+      & ~ a,
+      & ~ .dropdown {
+        margin-left: 15px;
+      }
+    }
+
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 30px;
+      margin-left: 30px;
+      display: none;
+
+      @include media-breakpoint-only(lg) {
+        font-size: 18px;
+        height: 45px;
+        margin-left: 20px;
+        min-width: 0;
+      }
+
+      &:hover {
+        background-color: $septenary-color;
+      }
+
+      img {
+        margin-right: 15px;
+        width: 22px;
+      }
+
+      .lang-name {
+        overflow: hidden;
+        white-space: nowrap;
+        width: auto;
+        max-width: 120px;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  .dropdown-menu.show {
+    &.country-dropdown {
+      border: none;
+      box-shadow: 0 0 34px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      left: -50% !important;
+      margin-top: 15px;
+      position: absolute;
+      padding: 30px;
+      overflow: hidden;
+      width: 100%;
+
+      @include media-breakpoint-up(lg) {
+        padding: 30px;
+        width: 550px;
+      }
+    }
+  }
+}
+
+.language-selector {
+  margin: 0 !important;
+  max-width: none !important;
+  top: 100px;
+
+  .modal {
+    &-content {
+      background: none;
+      border: none;
+      border-radius: 0;
+    }
+
+    &-body {
+      padding: 0;
+
+      .language {
+        &__holder {
+          display: flex;
+          flex-wrap: nowrap;
+          overflow: auto;
+          padding-bottom: 20px;
+        }
+
+        &__item {
+          align-items: center;
+          background: $white;
+          border: none;
+          border-radius: 50px;
+          color: $septenary-color;
+          display: inline-flex;
+          font-family: $font-capriola;
+          height: 40px;
+          justify-content: center;
+          min-width: 155px;
+          margin-left: auto;
+
+          & ~ * {
+            margin-left: 15px;
+          }
+
+          &button:focus,
+          &button:hover,
+          &button:active {
+            background: $white;
+            color: $septenary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mobile-menu {
+  background: $white url("../../images/mobile-menu-background.svg") no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  left: -100%;
+  position: fixed;
+  width: 100%;
+  z-index: 9;
+  transition: 0.3s;
+  padding-top: 130px;
+
+  &.active {
+    left: 0;
+  }
+
+  @include media-breakpoint-only(md) {
+    max-width: 375px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+
+  &-active#header {
+    position: fixed;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    padding: 0 25px;
+
+    a,
+    button {
+      background: none;
+      border: 0;
+      border-radius: 0;
+      color: $septenary-color;
+      font-size: 18px;
+      font-family: $font-capriola;
+      line-height: 25px;
+      margin: 10px 0;
+      padding: 0;
+      text-align: left;
+
+      &:focus,
+      &:hover,
+      &:active {
+        background: none;
+        box-shadow: none;
+        color: $septenary-color;
+        outline: none;
+      }
+    }
+  }
+
+  .country-dropdown {
+    border: none;
+    background: none;
+    padding: 0;
+    position: relative !important;
+    transform: none !important;
+    width: 100%;
+  }
+}

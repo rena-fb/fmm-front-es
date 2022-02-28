@@ -1,0 +1,94 @@
+@import "../../styles/modules.scss";
+
+.tools {
+  color: $text-color-white;
+  position: relative;
+
+  &::before {
+    content: "";
+    background-color: #2e73ff;
+    position: absolute;
+    height: calc(100% - 100px);
+    left: 0;
+    top: 100px;
+    width: 100%;
+    z-index: 0;
+  }
+
+  &::after {
+    content: "";
+    background: url("../../images/tool-bg.svg") top center no-repeat;
+    background-size: 100%;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: -50px;
+    width: 100%;
+    z-index: 0;
+  }
+
+  &__item {
+    margin-bottom: 75px;
+    z-index: 1;
+
+    p {
+      margin: 0 auto 40px;
+      max-width: 400px;
+    }
+
+    &:nth-child(2) {
+      img {
+        width: 320px;
+
+        @include media-breakpoint-up(md) {
+          width: 450px;
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      img {
+        width: 320px;
+
+        @include media-breakpoint-up(md) {
+          width: 450px;
+        }
+      }
+    }
+  }
+
+  &__icon {
+    margin: 0 auto 30px;
+    height: 150px;
+    width: 100%;
+
+    @include media-breakpoint-up(md) {
+      height: 220px;
+      width: 100%;
+    }
+
+    img {
+      object-fit: cover;
+      height: 150px;
+      width: 230px;
+
+      @include media-breakpoint-up(md) {
+        height: 220px;
+        width: 350px;
+      }
+    }
+  }
+
+  &__header {
+    color: $tertiary-color;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: $font-900;
+    margin-bottom: 30px;
+
+    @include media-breakpoint-up(md) {
+      font-size: 35px;
+      line-height: 55px;
+    }
+  }
+}

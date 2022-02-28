@@ -1,0 +1,90 @@
+@import "../../styles/modules.scss";
+
+.footer {
+  position: relative;
+  padding: 85px 0 40px;
+
+  * {
+    color: $text-color-white;
+    font-size: 16px;
+
+    @include media-breakpoint-up(md) {
+      font-size: 18px;
+    }
+  }
+
+  &::before {
+    content: "";
+    background-color: #1d1a51;
+    position: absolute;
+    height: calc(100% - 50px);
+    left: 0;
+    top: 50px;
+    width: 100%;
+    z-index: 0;
+
+    @include media-breakpoint-up(md) {
+      height: calc(100% - 135px);
+      top: 135px;
+    }
+  }
+
+  &::after {
+    content: "";
+    background: url("../../images/footer-bg.svg") top center no-repeat;
+    background-size: 100%;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__top {
+    margin-bottom: 40px;
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      text-align: left;
+    }
+  }
+
+  &__nav {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 40px;
+
+    @include media-breakpoint-up(md) {
+      gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      margin-bottom: 50px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__copyright {
+    font-family: $font-capriola;
+    margin: 0;
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      text-align: left;
+    }
+  }
+}

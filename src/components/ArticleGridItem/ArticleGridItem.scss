@@ -1,0 +1,42 @@
+@import "../../styles/modules.scss";
+
+.article-grid {
+  &__item {
+    max-width: 500px;
+    margin: 0 auto 60px;
+
+    a {
+      display: block;
+      transition: 0.3s;
+    }
+
+    &-image {
+      border-radius: 20px;
+      box-shadow: (0px 4px 50px rgba(38, 34, 98, 0.4));
+      display: block;
+      height: 160px;
+      margin-bottom: 30px;
+      width: 100%;
+      object-fit: cover;
+      overflow: hidden;
+
+      @include media-breakpoint-up(md) {
+        height: 200px;
+      }
+
+      @include media-breakpoint-up(lg) {
+        height: 300px;
+      }
+    }
+
+    &-title {
+      font-size: 20px;
+      line-height: 30px;
+
+      @include media-breakpoint-up(md) {
+        font-size: 33px;
+        line-height: 40px;
+      }
+    }
+  }
+}

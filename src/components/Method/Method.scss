@@ -1,0 +1,53 @@
+
+
+@import "../../styles/modules.scss";
+
+.method {
+  align-items: center;
+  background: rgba($color: $senary-color, $alpha: 0.7)
+    url("../../images/method-bg.svg") no-repeat center;
+  background-size: cover;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 500px;
+  height: 100%;
+  padding: 40px 20px 30px;
+
+  h3 {
+    color: $tertiary-color;
+    font-size: 30px;
+    font-weight: $font-900;
+    line-height: 40px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  p {
+    color: $text-color-white;
+    font-size: 20px;
+    margin-bottom: 40px;
+    width: 100%;
+  }
+
+  img {
+    object-fit: contain;
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  .button {
+    font-size: 18px;
+    height: 50px;
+    line-height: 50px;
+    min-width: 0;
+    width: 100%;
+    margin-top: auto;
+
+    & ~ .button {
+      margin-top: 10px;
+    }
+  }
+}

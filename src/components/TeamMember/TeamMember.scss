@@ -1,0 +1,92 @@
+@import "../../styles/modules.scss";
+
+.team-member {
+  display: flex;
+  margin-bottom: 70px;
+  flex-direction: column;
+
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+    margin-bottom: 30px;
+  }
+
+  h4 {
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      text-align: left;
+    }
+  }
+
+  p {
+    text-align: center;
+    font-size: 18px;
+    line-height: 25px;
+    margin: 0 auto 20px;
+    max-width: 500px;
+
+    @include media-breakpoint-up(md) {
+      font-size: 22px;
+      line-height: 30px;
+      text-align: left;
+      margin: 0 auto;
+      max-width: none;
+    }
+  }
+
+  &__grid {
+    align-items: center;
+    flex-direction: column;
+  margin-bottom: 30px;
+    text-align: center;
+
+    img {
+      margin: 0 auto;
+      height: 150px;
+      width: 150px;
+    }
+
+    h4 {
+      font-size: 18px;
+      line-height: 1.5;
+      text-align: center;
+
+      @include media-breakpoint-up(md) {
+        font-size: 22px;
+        text-align: center;
+      }
+    }
+
+    p {
+      text-align: center;
+      font-size: 16px;
+      margin: 0;
+
+      @include media-breakpoint-up(md) {
+        font-size: 18px;
+        line-height: 1.5;
+        text-align: center;
+        margin: 0 auto;
+        max-width: none;
+      }
+    }
+  }
+
+  &__image {
+    border-radius: 150px;
+    display: block;
+    height: 150px;
+    margin: 0 auto 15px;
+    object-fit: cover;
+    overflow: hidden;
+    text-align: center;
+    width: 150px;
+    max-width: none;
+
+    @include media-breakpoint-up(md) {
+      height: 250px;
+      margin-right: 50px;
+      width: 250px;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+@import "../../styles/modules.scss";
+
+.countries-grid {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  
+  @include media-breakpoint-down(md) {
+    display: block;
+    height: 35px;
+    overflow: auto;
+    white-space: nowrap;
+  }
+
+  @include media-breakpoint-up(lg) {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    height: auto;
+    white-space: normal;
+  }
+
+  &.ur, .ar {
+
+    li {
+      span {
+        margin-left: 0;
+        margin-right: 10px;
+      }
+
+      @include media-breakpoint-down(md) {
+        margin-left: 0;
+
+        ~li {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+
+  li {
+    display: inline-block;
+    font-family: $font-capriola;
+    list-style: none;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+
+    ~ li {
+      margin-left: 30px;
+
+      @include media-breakpoint-up(lg) {
+        margin: 0;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      align-items: center;
+      display: flex;
+      margin: 0;
+    }
+
+    a {
+      color: $septenary-color;
+      margin: 0 !important;
+    }
+
+    img {
+      object-fit: contain;
+    }
+
+    span {
+      color: $septenary-color;
+      display: inline-flex;
+      font-size: 15px;
+      line-height: 30px;
+      margin-left: 10px;
+    }
+  }
+}

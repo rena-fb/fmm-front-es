@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-404-js",
+    "path": "/404/",
+    "result": {"pageContext":{"breadcrumb":{"location":"/404/","crumbs":[{"pathname":"/","crumbLabel":"Home"},{"pathname":"/404","crumbLabel":"404"}]}}},
+    "staticQueryHashes": ["1271460761","2122397224","2364228080","2898838263","3893395773","63159454","697822104"]}

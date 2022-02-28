@@ -1,0 +1,30 @@
+@import "../../styles/modules.scss";
+
+#cookies-popup {
+  background: $septenary-color;
+  bottom: 0;
+  color: $white;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+
+  @include media-breakpoint-up(md) {
+    padding: 30px;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  button {
+    background: $white;
+    border: none;
+    border-radius: 30px;
+    color: $septenary-color;
+    font-size: 20px;
+    height: 50px;
+    padding: 0 50px;
+    text-transform: uppercase;
+  }
+}

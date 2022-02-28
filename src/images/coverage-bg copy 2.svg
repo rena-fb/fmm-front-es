@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg fill="none" viewBox="0 0 1500 850" xmlns="http://www.w3.org/2000/svg">
+<g opacity=".15" style="mix-blend-mode:multiply">
+<path d="M0 353.038C253.223 263.105 629.55 186.513 832.333 488.763C1013.8 755.979 1078.5 850 1500 850V0H0V353.038Z" fill="#262262"/>
+</g>
+<g opacity=".15" style="mix-blend-mode:multiply">
+<path d="m0 676.22v-676.22h1500v199.75c-530.4-206.27-946.67 53.833-1088.5 209.67-152 211.93-337.67 266.18-411.5 266.8z" fill="#262262"/>
+</g>
+</svg>
