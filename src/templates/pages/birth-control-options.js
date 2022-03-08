@@ -125,7 +125,7 @@ const FindMyMethod = ({ data, pageContext }) => {
   }
 
   const goToCompare = () => {
-    navigate(`${lang !== "en" ? `/${lang}` : ""}/compare-contraceptive-methods`)
+    navigate(`${lang !== "es" ? `/${lang}` : ""}/compare-contraceptive-methods`)
   }
 
   useEffect(() => {

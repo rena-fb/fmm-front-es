@@ -130,12 +130,12 @@ const FAQ = ({ data, pageContext }) => {
                           src={
                             method?.node?.generic_block_data?.image?.sourceUrl
                           }
-                          alt={method?.node?.title}
+                          alt={method?.node?.generic_block_data?.linkLabel}
                           loading="lazy"
                         />
                       </figure>
                       <section className="country-profile__method-item-right">
-                        <h6>{method?.node?.title}</h6>
+                        <h6>{method?.node?.generic_block_data?.linkLabel}</h6>
                       </section>
                     </Link>
                   </section>
