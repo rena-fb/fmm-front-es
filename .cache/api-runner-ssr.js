@@ -1,26 +1,30 @@
 var plugins = [{
       name: 'gatsby-plugin-google-tagmanager',
-      plugin: require('C:/wamp64/www/fmm-front-es/node_modules/gatsby-plugin-google-tagmanager/gatsby-ssr'),
-      options: {"plugins":[],"id":"GTM-MMQM76Q","includeInDevelopment":true,"defaultDataLayer":null,"routeChangeEventName":"gatsby-route-change","enableWebVitalsTracking":false,"selfHostedOrigin":"https://www.googletagmanager.com"},
+      plugin: require('C:/Users/52558/Desktop/fmm-front-es/node_modules/gatsby-plugin-google-tagmanager/gatsby-ssr'),
+      options: {"plugins":[],"id":"GTM-PPGFBPQ","includeInDevelopment":true,"defaultDataLayer":null,"routeChangeEventName":"gatsby-route-change","enableWebVitalsTracking":false,"selfHostedOrigin":"https://www.googletagmanager.com"},
     },{
       name: 'gatsby-plugin-sitemap',
-      plugin: require('C:/wamp64/www/fmm-front-es/node_modules/gatsby-plugin-sitemap/gatsby-ssr'),
+      plugin: require('C:/Users/52558/Desktop/fmm-front-es/node_modules/gatsby-plugin-sitemap/gatsby-ssr'),
       options: {"plugins":[],"output":"/sitemap","createLinkInHead":true,"entryLimit":45000,"query":"{ site { siteMetadata { siteUrl } } allSitePage { nodes { path } } }","excludes":[]},
     },{
       name: 'gatsby-plugin-react-helmet',
-      plugin: require('C:/wamp64/www/fmm-front-es/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      plugin: require('C:/Users/52558/Desktop/fmm-front-es/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     },{
+      name: 'gatsby-plugin-react-helmet-canonical-urls',
+      plugin: require('C:/Users/52558/Desktop/fmm-front-es/node_modules/gatsby-plugin-react-helmet-canonical-urls/gatsby-ssr'),
+      options: {"plugins":[],"siteUrl":"https://findmymethod.org/es"},
+    },{
       name: 'gatsby-plugin-image',
-      plugin: require('C:/wamp64/www/fmm-front-es/node_modules/gatsby-plugin-image/gatsby-ssr'),
+      plugin: require('C:/Users/52558/Desktop/fmm-front-es/node_modules/gatsby-plugin-image/gatsby-ssr'),
       options: {"plugins":[]},
     },{
       name: 'gatsby-plugin-manifest',
-      plugin: require('C:/wamp64/www/fmm-front-es/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
+      plugin: require('C:/Users/52558/Desktop/fmm-front-es/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
       options: {"plugins":[],"name":"gatsby-starter-default","short_name":"starter","start_url":"/","background_color":"#F78F2D","theme_color":"#F78F2D","display":"minimal-ui","icon":"src/images/gatsby-icon.png","icons":[{"src":"src/images/android-chrome-192x192.png","sizes":"192x192","type":"image/png"},{"src":"src/images/android-chrome-512x512.png","sizes":"512x512","type":"image/png"}],"legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","crossOrigin":"anonymous","include_favicon":true,"cacheDigest":"5821d8c4cf324950587303ad35a8b1b0"},
     },{
       name: 'gatsby-plugin-breadcrumb',
-      plugin: require('C:/wamp64/www/fmm-front-es/node_modules/gatsby-plugin-breadcrumb/gatsby-ssr'),
+      plugin: require('C:/Users/52558/Desktop/fmm-front-es/node_modules/gatsby-plugin-breadcrumb/gatsby-ssr'),
       options: {"plugins":[],"useAutoGen":true},
     }]
 /* global plugins */

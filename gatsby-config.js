@@ -1,16 +1,16 @@
 module.exports = {
   siteMetadata: {
-    title: `Find My Method`,
-    description: `Find My Method is affiliated with a registered U.S.-based 501c(3) non-profit organization. Find My Method provides content intended for informational purposes only and is not affiliated with a medical organization.`,
+    title: `Guía de sexo seguro`,
+    description: `¿Buscas métodos anticonceptivos? Consulta toda la información relacionada con métodos de planificación familiar, te ayudamos a escoger el mejor para ti.`,
     author: `@wfdTechTeam`,
-    siteUrl: `https://findmymethod.org/`,
+    siteUrl: `https://guiadesexoseguro.org/`,
     default_lang: `es`,
   },
   plugins: [
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
-        id: "GTM-MMQM76Q",
+        id: "GTM-PPGFBPQ",
 
         // Include GTM in development.
         //
@@ -59,6 +59,12 @@ module.exports = {
     },
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-react-helmet-canonical-urls`,
+      options: {
+        siteUrl: `https://findmymethod.org/es`,
+      },
+    },
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,

@@ -1,12 +1,15 @@
 module.exports = [{
       plugin: require('../node_modules/gatsby-plugin-google-tagmanager/gatsby-browser.js'),
-      options: {"plugins":[],"id":"GTM-MMQM76Q","includeInDevelopment":true,"defaultDataLayer":null,"routeChangeEventName":"gatsby-route-change","enableWebVitalsTracking":false,"selfHostedOrigin":"https://www.googletagmanager.com"},
+      options: {"plugins":[],"id":"GTM-PPGFBPQ","includeInDevelopment":true,"defaultDataLayer":null,"routeChangeEventName":"gatsby-route-change","enableWebVitalsTracking":false,"selfHostedOrigin":"https://www.googletagmanager.com"},
     },{
       plugin: require('../node_modules/gatsby-plugin-catch-links/gatsby-browser.js'),
       options: {"plugins":[]},
     },{
       plugin: require('../node_modules/gatsby-source-wordpress/gatsby-browser.js'),
       options: {"plugins":[],"url":"https://fmm-admin.safe2choose.org/bk-gql","schema":{"timeout":300000,"queryDepth":15,"circularQueryLimit":5,"typePrefix":"Wp","perPage":100,"requestConcurrency":15,"previewRequestConcurrency":5},"html":{"useGatsbyImage":true,"createStaticFiles":true,"imageMaxWidth":null,"fallbackImageMaxWidth":100,"imageQuality":90,"generateWebpImages":false},"production":{"allow404Images":true,"hardCacheMediaFiles":false},"verbose":true},
+    },{
+      plugin: require('../node_modules/gatsby-plugin-react-helmet-canonical-urls/gatsby-browser.js'),
+      options: {"plugins":[],"siteUrl":"https://findmymethod.org/es"},
     },{
       plugin: require('../node_modules/gatsby-plugin-image/gatsby-browser.js'),
       options: {"plugins":[]},
